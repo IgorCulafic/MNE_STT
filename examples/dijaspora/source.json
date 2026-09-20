@@ -1,0 +1,31 @@
+{
+  "title": "Dijaspora u fokusu - priče iz Turske",
+  "source_video_filename": "Dijaspora u fokusu - priče iz Turske.mp4",
+  "audio_file": "dijaspora-u-fokusu.flac",
+  "transcript_file": "gemini-transcript.txt",
+  "transcript_source": "User-supplied Gemini transcript; unchanged UTF-8 bytes",
+  "sample_rate": 16000,
+  "channels": 1,
+  "bits_per_sample": 16,
+  "samples": 32256790,
+  "duration_seconds": 2016.049375,
+  "pcm_sha256": "8b0003670a071e1b1c04a1715d70fb87ad03faf84114ddebfc3ad57f51de7287",
+  "files_sha256": {
+    "dijaspora-u-fokusu.flac": "107d1fb67f5bf151d6a29a4e3bad06ce1074e7d285468afb47cb7621ec2c0cac",
+    "gemini-transcript.txt": "d83ff4dd41d2b0c13d3e447d3e18f833d4606048d7ce68db9a65bdf25786e86e"
+  },
+  "known_timing_issue_ids": [
+    "013",
+    "018",
+    "022",
+    "027",
+    "029",
+    "032",
+    "044",
+    "057",
+    "063",
+    "073",
+    "090",
+    "092"
+  ]
+}

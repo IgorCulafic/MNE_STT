@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/
+*.pyc
+test-results/
+.test-tmp/
+.pytest-tmp/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+# Original local copy; the identical transcript is bundled under examples/.
+/Dijaspora u fokusu.txt

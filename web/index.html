@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#075cef"><title>Montenegrin STT Review</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Montenegrin STT Review home"><svg viewBox="0 0 56 36" aria-hidden="true"><path fill="#5995d1" d="M17 32 35 5q2-3 4 0l17 27Z"/><path fill="#1563bc" d="M0 32 15 13q2-3 4 0l16 19Z"/><path fill="#357cc5" d="m20 32 9-14 10 14Z"/></svg><span>Montenegrin <b>STT Review</b></span></a>
+    <span class="header-divider"></span><span id="session-label">Your workspace for better speech.</span>
+    <div class="header-actions"><button class="quiet" id="help-button"></button><button class="quiet" id="settings-button"></button><span class="avatar" title="Local, single-user workspace">ME</span></div>
+  </header>
+  <div class="app-shell">
+    <aside class="sidebar"><nav id="navigation" aria-label="Main navigation"></nav><div class="sidebar-foot"><span class="little-mountain">◢</span><p>Better speech.<br>A more connected region.</p><small>LOCAL WORKSPACE <span class="dot"></span></small><span class="version">v1.0.0</span></div></aside>
+    <main id="main"></main>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="dialog"><div id="dialog-content"></div><button class="button dialog-close" id="close-dialog">Close</button></dialog>
+  <audio id="audio" preload="metadata"></audio>
+  <script src="/chunking.js" defer></script>
+  <script src="/app.js" defer></script>
+</body></html>
