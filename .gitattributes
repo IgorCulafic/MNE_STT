@@ -1,0 +1,10 @@
+* text=auto
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.flac binary
+# Preserve the supplied Gemini transcript byte-for-byte, including line endings.
+examples/dijaspora/gemini-transcript.txt -text
