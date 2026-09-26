@@ -18,9 +18,9 @@ from .speech import align, transcribe
 from .store import Store, dumps, now
 from .transcripts import parse_transcript, render
 from .chunking import options as chunk_options, plan as chunk_plan, silence_boundaries
+from .models import MODELS
 
 ROOT = Path(__file__).resolve().parent.parent
-MODELS = ("tiny", "base", "small", "medium", "large-v3", "large-v3-turbo")
 
 
 class Mutation(BaseModel):
