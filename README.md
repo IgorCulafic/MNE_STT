@@ -10,6 +10,8 @@ The repository contains source code, tests, dependency lists, startup scripts, a
 
 ## Install and run
 
+**Windows quick start:** download and fully extract the ZIP from the [v1.1.0 release](https://github.com/IgorCulafic/MNE_STT/releases/tag/v1.1.0). Double-click **`install-and-download-all.bat`**, then **`run.bat`**. Separate `install.bat` and `download-models.bat` files are also included. See [WINDOWS.md](WINDOWS.md) for requirements, download options, and troubleshooting.
+
 Python **3.11 or 3.12 is recommended**, especially for Whisper's native dependencies. The complete app, including Whisper, was also verified with Python 3.14.5 and the bundled dependencies. No Node.js build is needed.
 
 ```powershell
@@ -111,7 +113,7 @@ Backend references: [faster-whisper](https://github.com/SYSTRAN/faster-whisper) 
 
 ## Verification performed
 
-71 automated tests pass. Additional real-model smoke tests exercised `bs`, `hr`, and `sr` with word timestamps, and the full import API for media-only transcription and text-preserving alignment. The speech smoke fixture was the upstream faster-whisper `tests/data/jfk.flac` recording; this verifies execution, not Montenegrin transcription quality. Browser checks covered Unicode editing, saving, neighbor propagation, and undo. Run `python tools/make_sample.py` to generate an explicitly labelled synthetic timing fixture for manual testing.
+77 automated tests pass. Additional real-model smoke tests exercised `bs`, `hr`, and `sr` with word timestamps, and the full import API for media-only transcription and text-preserving alignment. The speech smoke fixture was the upstream faster-whisper `tests/data/jfk.flac` recording; this verifies execution, not Montenegrin transcription quality. Browser checks covered Unicode editing, saving, neighbor propagation, and undo. Run `python tools/make_sample.py` to generate an explicitly labelled synthetic timing fixture for manual testing.
 
 
 ## Chunking modes

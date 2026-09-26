@@ -14,3 +14,4 @@ test-results/
 Thumbs.db
 # Original local copy; the identical transcript is bundled under examples/.
 /Dijaspora u fokusu.txt
+dist/

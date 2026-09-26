@@ -7,6 +7,7 @@ import re
 import threading
 from .domain import Conflict
 from .transcripts import segment
+from .models import model_cache
 
 _inference_lock = threading.Lock()
 
@@ -19,7 +20,7 @@ def transcribe(path, settings, report):
     report("Waiting for the transcription engine…", 20)
     with _inference_lock:
         report("Loading Whisper model (first use may download model weights)…", 22)
-        cache = os.environ.get("STT_MODEL_CACHE", str(Path(path).parent.parent / "models"))
+        cache = str(model_cache(Path(path).parent.parent))
         model = WhisperModel(settings["model"], device="cpu", compute_type="int8", download_root=cache)
         language = settings["language"]
         if language not in model.supported_languages:
