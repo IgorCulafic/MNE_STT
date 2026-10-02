@@ -1,16 +1,28 @@
 # Montenegrin STT Review
 
-A local, single-user research workspace for reviewing speech transcripts and correcting their timestamps. The interface follows the supplied import/review references: blue navigation, a segment list, text editor, context waveform, timing controls, progress, and history.
+Speech recognition output for Montenegrin needs careful human review. MNE STT is a local app for doing that quickly: listen to each segment, correct the text, adjust its timing on a waveform, and export clean transcripts and audio clips for research.
 
-## Included recording and transcript
+![Review screen with an editable Unicode transcript, audio waveform, timing and chunking controls, and Correct / Incorrect actions](docs/images/review-screen.jpg)
 
-The [Dijaspora example](examples/dijaspora/README.md) includes a lossless audio-only copy of the recording and the original Gemini transcript. After starting the app, import `examples/dijaspora/dijaspora-u-fokusu.flac` with `examples/dijaspora/gemini-transcript.txt`, keeping **Default** chunking. This loads 117 cues without requiring Whisper. Twelve zero-length timestamps are flagged for manual repair. See the example README for provenance and checksums.
+*The review screen using the synthetic timing demo, with sample Unicode text. The audio contains tones, not recorded speech.*
 
-The repository contains source code, tests, dependency lists, startup scripts, and this example. Virtual environments, model downloads, local projects/databases, and temporary test output are excluded; the app creates its runtime folders as needed.
+## Try it with your own recording
+
+Import an audio or video file, optionally alongside a TXT, SRT, VTT, or JSON transcript. Use recordings and transcripts you own or have permission to use and redistribute. No broadcast recording or third-party transcript is bundled with the repository or current Windows release.
+
+To explore the editor without speech or a model download, run this after installing:
+
+```powershell
+python tools/make_sample.py
+```
+
+Import the generated `test-results/timing-practice.wav` and `test-results/timing-practice.json`, keeping **Default** chunking. This creates six timed segments for practicing edits, boundary adjustments, review actions, and exports. The synthetic tones are a UI/timing exercise; they cannot measure speech recognition accuracy.
+
+The repository contains source code, tests, dependency lists, startup scripts, and the demo generator. Virtual environments, model downloads, local projects/databases, and temporary test output are excluded; the app creates its runtime folders as needed.
 
 ## Install and run
 
-**Windows quick start:** download and fully extract the ZIP from the [v1.1.0 release](https://github.com/IgorCulafic/MNE_STT/releases/tag/v1.1.0). Double-click **`install-and-download-all.bat`**, then **`run.bat`**. Separate `install.bat` and `download-models.bat` files are also included. See [WINDOWS.md](WINDOWS.md) for requirements, download options, and troubleshooting.
+**Windows quick start:** download and fully extract the ZIP from the [v1.1.1 release](https://github.com/IgorCulafic/MNE_STT/releases/tag/v1.1.1). Double-click **`install-and-download-all.bat`**, then **`run.bat`**. Separate `install.bat` and `download-models.bat` files are also included. See [WINDOWS.md](WINDOWS.md) for requirements, download options, and troubleshooting.
 
 Python **3.11 or 3.12 is recommended**, especially for Whisper's native dependencies. The complete app, including Whisper, was also verified with Python 3.14.5 and the bundled dependencies. No Node.js build is needed.
 

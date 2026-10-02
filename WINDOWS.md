@@ -1,6 +1,6 @@
 # Windows setup and launch
 
-Download `MNE-STT-v1.1.0-windows.zip` from the [GitHub release](https://github.com/IgorCulafic/MNE_STT/releases/tag/v1.1.0). **Extract the entire ZIP** to a writable folder before running anything, and keep the files together. Windows x64 is the supported target.
+Download `MNE-STT-v1.1.1-windows.zip` from the [GitHub release](https://github.com/IgorCulafic/MNE_STT/releases/tag/v1.1.1). **Extract the entire ZIP** to a writable folder before running anything, and keep the files together. Windows x64 is the supported target.
 
 | File | What it does |
 | --- | --- |
@@ -13,7 +13,7 @@ For everything in one setup, double-click **install-and-download-all.bat**, then
 
 Initial setup requires internet access and several GB of storage and download data for the model weights. Allow extra disk space for recordings and decoded audio. Downloads run sequentially, retry transient failures, and reuse cached files when rerun. They do not load all models into RAM. Failed operations remain visible in the console and return a nonzero exit code.
 
-The ZIP includes the audio-only Dijaspora recording and original Gemini transcript in `examples/dijaspora/`. You can review that timestamped example after installation without downloading any models. Model weights are fetched from the repositories selected by faster-whisper and are not embedded in the ZIP. This is a batch-based Windows package, not a standalone EXE.
+Bring your own recording and optional transcript. To try the editor without downloading models, run `.venv\Scripts\python.exe tools\make_sample.py` from the extracted folder, then import the generated `test-results/timing-practice.wav` and `test-results/timing-practice.json` using **Default** chunking. This demo contains synthetic tones, not speech. No broadcast recording or third-party transcript is included. Model weights are fetched from the repositories selected by faster-whisper and are not embedded in the ZIP. This is a batch-based Windows package, not a standalone EXE.
 
 ## Options
 
@@ -45,8 +45,8 @@ Models go in `data/models/` by default. Set `STT_MODEL_CACHE` to change the mode
 The release includes a SHA-256 checksum for the ZIP and `BUILD.json` inside it with the source commit. Compare the checksum using PowerShell:
 
 ```powershell
-Get-FileHash .\MNE-STT-v1.1.0-windows.zip -Algorithm SHA256
-Get-Content .\MNE-STT-v1.1.0-windows.zip.sha256
+Get-FileHash .\MNE-STT-v1.1.1-windows.zip -Algorithm SHA256
+Get-Content .\MNE-STT-v1.1.1-windows.zip.sha256
 ```
 
-Maintainers can regenerate a package from committed source with `python tools/build_release.py v1.1.0`. The builder includes only committed files, sets Windows line endings for launch scripts, and excludes local runtime directories.
+Maintainers can regenerate a package from committed source with `python tools/build_release.py v1.1.1`. The builder includes only committed files, sets Windows line endings for launch scripts, and excludes local runtime directories.

@@ -12,6 +12,7 @@ test-results/
 *.log
 .DS_Store
 Thumbs.db
-# Original local copy; the identical transcript is bundled under examples/.
+# Local source material; excluded from public distribution.
 /Dijaspora u fokusu.txt
+/examples/dijaspora/
 dist/
