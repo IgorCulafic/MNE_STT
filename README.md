@@ -63,7 +63,7 @@ JSON accepts a top-level array or this object. Times are numeric seconds on the 
 {
   "segments": [
     {"id": "001", "start": 0.0, "end": 4.2, "text": "Śutra ćemo razgovarati."},
-    {"id": "002", "start": 4.2, "end": 8.0, "text": "Čujem đecu. Ћирилица остаје."}
+    {"id": "002", "start": 4.2, "end": 8.0, "text": "Danas je lijep dan. Ћирилица остаје."}
   ]
 }
 ```
